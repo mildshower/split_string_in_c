@@ -5,12 +5,12 @@
 
 typedef char *char_ptr;
 
-unsigned get_string_length(char *string);
+unsigned get_string_length(char_ptr string);
 
-char *create_heap_copy(char *string);
+char_ptr create_heap_copy(char_ptr string);
 
-unsigned count_occurrence(char *string, char token_char);
+unsigned count_occurrence(char_ptr string, char token_char);
 
-dynamic_string_array *split_string(char *string, char splitter);
+dynamic_string_array *split_string(char_ptr string, char splitter);
 
 #endif
