@@ -4,7 +4,7 @@
 unsigned get_string_length(char_ptr string)
 {
   unsigned length = 0;
-  for (int index = 0; string[index + 1] != '\0'; index++)
+  for (int index = 0; string[index] != '\0'; index++)
   {
     length++;
   }
@@ -28,7 +28,7 @@ unsigned count_occurrence(char_ptr string, char token_char)
 {
   unsigned count = 0, index;
 
-  for (index = 1; string[index + 1] != '\0'; index++)
+  for (index = 0; string[index] != '\0'; index++)
   {
     if (string[index] == token_char)
       count++;
@@ -46,7 +46,7 @@ dynamic_string_array *split_string(char_ptr string, char splitter)
   unsigned token_index = 0;
   splitted_array->strings[0] = string_copy;
 
-  for (int index = 0; string_copy[index + 1] != '\0'; index++)
+  for (int index = 0; string_copy[index] != '\0'; index++)
   {
     if (string_copy[index] == splitter)
     {
